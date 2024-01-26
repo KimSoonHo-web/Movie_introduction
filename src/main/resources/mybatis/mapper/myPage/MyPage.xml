@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.vue.myPage.mapper.MyPageMapper">
+
+
+	 <update id="updateUser">
+        UPDATE users
+        SET password = #{password}
+        WHERE email = #{email}
+    </update>
+    
+    
+    <select id="userListForm">
+    	SELECT * from users
+    </select>
+	
+	<delete id="delectUser">
+		DELETE FROM users WHERE id = #{id}
+	</delete>
+	
+	  <update id="upDateUserRole">
+        UPDATE users
+        SET userRole = #{newUserRole}
+        WHERE id = #{id}
+     </update>
+	
+	
+</mapper>
